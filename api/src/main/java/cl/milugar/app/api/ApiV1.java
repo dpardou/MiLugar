@@ -1,5 +1,12 @@
 package cl.milugar.app.api;
 
+import javax.ws.rs.Consumes;
+import javax.ws.rs.POST;
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+
 import cl.milugar.app.responses.TestResponse;
 import cl.milugar.app.requests.TestRequest;
 import cl.milugar.app.responses.RegistrarUsuarioResponse;
@@ -15,9 +22,13 @@ import cl.milugar.app.requests.ContactoRequest;
 import cl.milugar.app.responses.DenunciaResponse;
 import cl.milugar.app.requests.DenunciaRequest;
 
+@Path("/prueba")
 public class ApiV1 {
 
-  public TestResponse test(TestRequest testRequest) {
+  @GET
+  @Path("/test")
+  @Produces({MediaType.APPLICATION_JSON})
+  public TestResponse test() {
     TestResponse response = new TestResponse();
     return response;
   }
