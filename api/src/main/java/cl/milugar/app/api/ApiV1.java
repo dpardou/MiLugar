@@ -33,6 +33,16 @@ public class ApiV1 {
     return response;
   }
 
+  @POST
+  @Path("/test")
+  @Produces({MediaType.APPLICATION_JSON})
+  @Consumes({MediaType.APPLICATION_JSON})
+  public TestResponse testPost(TestRequest request) {
+    TestResponse response = new TestResponse();
+    response.setStatus(request.getStatus());
+    return response;
+  }
+
   public RegistrarUsuarioResponse registrarUsuario(RegistrarUsuarioRequest request) {
     RegistrarUsuarioResponse response = new RegistrarUsuarioResponse();
     return response;
