@@ -43,31 +43,55 @@ public class ApiV1 {
     return response;
   }
 
+  @POST
+  @Path("/registroUsuario")
+  @Produces({MediaType.APPLICATION_JSON})
+  @Consumes({MediaType.APPLICATION_JSON})
   public RegistrarUsuarioResponse registrarUsuario(RegistrarUsuarioRequest request) {
     RegistrarUsuarioResponse response = new RegistrarUsuarioResponse();
     return response;
   }
 
+  @POST
+  @Path("/registroEstacionamiento")
+  @Produces({MediaType.APPLICATION_JSON})
+  @Consumes({MediaType.APPLICATION_JSON})
   public NuevoEstacionamientoResponse nuevoEstacionamiento(NuevoEstacionamientoRequest request) {
     NuevoEstacionamientoResponse response = new NuevoEstacionamientoResponse();
     return response;
   }
 
+  @POST
+  @Path("/recuperarPassword")
+  @Produces({MediaType.APPLICATION_JSON})
+  @Consumes({MediaType.APPLICATION_JSON})
   public RecuperarPasswordResponse recuperarPassword(RecuperarPasswordRequest request) {
     RecuperarPasswordResponse response = new RecuperarPasswordResponse();
     return response;
   }
 
+  @POST
+  @Path("/autenticarUsuario")
+  @Produces({MediaType.APPLICATION_JSON})
+  @Consumes({MediaType.APPLICATION_JSON})
   public AutenticarUsuarioResponse autenticarUsuario(AutenticarUsuarioRequest request) {
     AutenticarUsuarioResponse response = new AutenticarUsuarioResponse();
     return response;
   }
 
+  @POST
+  @Path("/contacto")
+  @Produces({MediaType.APPLICATION_JSON})
+  @Consumes({MediaType.APPLICATION_JSON})
   public ContactoResponse contacto(ContactoRequest request) {
     ContactoResponse response = new ContactoResponse();
     return response;
   }
 
+  @POST
+  @Path("/denuncia")
+  @Produces({MediaType.APPLICATION_JSON})
+  @Consumes({MediaType.APPLICATION_JSON})
   public DenunciaResponse denuncia(DenunciaRequest request) {
     DenunciaResponse response = new DenunciaResponse();
     return response;

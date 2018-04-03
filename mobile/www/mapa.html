@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mapa</title>
+  <link rel="stylesheet" href="./leaflet.css">
+</head>
+<body id="pantalla-mapa">
+  <div id="app">
+    <header>
+      <button type="button">Menu Lateral</button>
+      <img id="logo-aplicacion" src="./images/logos/logo.png" style="width:10vw;height:15vh;">
+    </header>
+    <div id="menu-lateral">
+      <li><a href="">Login</a></li>
+      <li><a href="">Registro</a></li>
+      <li><a href="">Filtro Mapa</a>
+        <ul>
+          <li><a href="">Filtrar por Comuna</a></li>
+          <li><a href="">Filtrar por Kilometros</a></li>
+          <li><a href="">Servicios Básicos</a></li>
+        </ul>
+      </li>
+      <li><a href="">Marcar Estacionamiento</a></li>
+      <li><a href="">Denunciar</a></li>
+      <li><a href="">Nosotros</a></li>
+      <ul>
+        <li><a href="">Redes Sociales</a></li>
+        <li><a href="">Contacto</a></li>
+      </ul>
+    </div>
+    <div id="mapa" style="width:50vw;height:50vh;"></div>
+  </div>
+  <script src="./leaflet.js"></script>
+  <script>
+    var mymap = L.map('mapa').setView([-33.4271183, -70.6133088], 18);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(mymap);
+
+    L.marker([-33.4271183, -70.6133088]).addTo(mymap)
+        .bindPopup('Prueba Geolocalización<br> App MiLugar.')
+        .openPopup();
+  </script>
+
+</body>
+</html>
