@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title> INSERTAR MAPA EN GOOGLE MAPS</title>
+
+  <style media="screen">
+    .google_canvas{
+      height: 100vh;
+      width: 100vh;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="google_canvas" class="google_canvas"></div>
+  <script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+  <script type="text/javascript">
+
+     (function(){
+       if(!!navigator.geolocation){
+         var map;
+         var mapOptions = {
+           zoom: 15;
+           mapTypeId: google.maps.MapTypeId.ROADMAP
+         };
+
+         map = google.maps.Map(document.getElementById("google_canvas"), mapOptions);
+
+         navigator.geolocation.getCurrentPosition(function(position){
+
+           var geolocate = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+
+           var infoWindow = new google.maps.infoWindow({
+             map: map,
+             position: geolocate,
+             content:
+               '<h1>Coordenadas de mi Posición</h1>' +
+               '<h2>Latitud: '+position.coords.latitude+'</h2>' +
+               '<h2>Longitud: '+position.coords.longitude+'</h2>'
+           });
+
+           map.setCenter(geolocate);
+         });
+
+       } else {
+         document.getElementById("google_canvas").innerHTML = "No se soporta Geolocalización";
+       }
+     })();
+  </script>
+
+
+</body>
+</html>﻿

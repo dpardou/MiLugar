@@ -1,51 +1,71 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="es" dir="ltr">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="icon" type="image/png" href="./images/logos/logo.png"/>
     <title>Pantalla Login</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
   </head>
-  <body id="pantalla-login">
-    <div id="app">
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">
+        <img src="./images/logos/logo.png" width="30" height="30" class="d-inline-block align-top" alt="" id="logo-aplicacion" center="true">
+        MiLugar
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+      </div>
+    </nav>
+
+
+
+    <div class="container">
       <header>
-        <label>
+        <p>
           Inicio de Sesión
-        </label>
-        <br>
-        <br>
-        <img id="logo-aplicacion" src="./images/logos/logo.png" style="width:10vw;height:15vh;">
+        </p>
+
       </header>
       <main>
-        <form id="form-login" action="#" method="post">
-          <label>
-            Ingrese sus datos para iniciar sesión
-          </label>
-          <br>
-          <br>
-          <div class="campo">
-            <label for="login-username">
-              Nombre de Usuario
-            </label>
-            <input type="email" id="login-username" name="login-username">
+        <form action="#" method="post">
+          <div class="card">
+            <div class="card-header">
+              Ingrese sus datos para iniciar sesión
+            </div>
+            <div class="card-body">
+              <div class="form-group">
+                <label for="login-username">
+                  Nombre de Usuario
+                </label>
+                <input type="email" class="form-control" id="login-username" name="login-username" placeholder="Ingrese su Email">
+              </div>
+              <div class="campo">
+                <label for="login-password">
+                  Contraseña
+                </label>
+                <input type="password" class="form-control" id="login-password" name="login-password" placeholder="Ingrese su contraseña">
+              </div>
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="login-remember-me">
+                <label class="form-check-label" for="login-remember-me">
+                  Recordar mi sesión
+                </label>
+              </div>
+              <button class="btn btn-primary btn-lg" type="button">Iniciar Sesión</button>
+              <div class="olvido-contraseña"><a href="#recuperarPassword">¿Olvido su contraseña?</a></div>
+            </div>
           </div>
-          <div class="campo">
-            <label for="login-password">
-              Contraseña
-            </label>
-            <input type="password" id="login-password" name="login-password">
-          </div>
-          <div class="campo">
-            <label for="login-remember-me">
-              Recordar mi sesión
-            </label>
-            <input type="checkbox" id="login-remember-me">
-          </div>
-          <button type="button">Iniciar Sesión</button>
-          <ul>
-            <li><a href="">¿Olvido su contraseña?</a></li>
-          </ul>
+
+
         </form>
       </main>
     </div>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/bootstrap.js"></script>
   </body>
 </html>
