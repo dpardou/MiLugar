@@ -4,7 +4,7 @@ html {
 }
 
 body {
-
+background-color: #3263a3;
 
 }
 
@@ -16,6 +16,13 @@ body {
 #app {
 
 
+}
+
+img#imagen-cargando {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      border:none;
 }
 
 img#logo-aplicacion {

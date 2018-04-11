@@ -1,0 +1,16 @@
+.pagina {
+  display: none;
+  visibility: hidden;
+}
+
+.pagina.pagina-activa {
+  display: block;
+  visibility: visible;
+  width: 100vw;
+  height: 100vh;
+}
+
+#map {
+  width: 100vw;
+  height: 100vh;
+}
