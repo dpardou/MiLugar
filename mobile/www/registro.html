@@ -1,69 +1,90 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="es" dir="ltr">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <link rel="icon" type="image/png" href="./images/logos/logo.png"/>
-    <title>Pantalla Registro</title>
+    <title>Pantalla Login</title>
     <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/app.css">
   </head>
-  <body>
+  <body style="background-color:#3263a3;">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">
+        <img src="./images/logos/logo.png" width="30" height="30" class="d-inline-block align-top" alt="" id="logo-aplicacionx">
+        MiLugar
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+      </div>
+    </nav>
     <div class="container">
       <header>
-        <label>
-          Registro de Usuario
-        </label>
-        <br>
-        <br>
-        <img id="logo-aplicacion" src="./images/logos/logo.png" style="width:10vw;height:15vh;">
+        <div class="container">
+          <img id="logo-aplicacion" src="./images/logos/logo.png">
+        </div>
       </header>
       <main>
-        <form id="form-registro" action="#" method="post">
-          <label>
-            Ingrese sus datos para registrarse
-          </label>
-          <br>
-          <br>
-          <div class="campo">
-            <label for="registro-nombre">
-              Nombre
-            </label>
-            <input type="text" id="registro-nombre" name="registro-nombre">
+        <form action="#" method="post">
+          <div class="card">
+            <div class="card-header">
+              Ingrese sus datos para Registrarse
+            </div>
+            <div class="card-body">
+              <div class="form-group">
+                <label for="register-name">
+                  Nombre
+                </label>
+                <input type="text" class="form-control" id="register-name" name="register-name" placeholder="Ingrese su Nombre">
+              </div>
+              <div class="form-group">
+                <label for="register-paterno">
+                  Apellido Paterno
+                </label>
+                <input type="text" class="form-control" id="register-paterno" name="register-paterno" placeholder="Ingrese su Apellido Paterno">
+              </div>
+              <div class="form-group">
+                <label for="register-materno">
+                  Apellido Materno
+                </label>
+                <input type="text" class="form-control" id="register-Materno" name="register-Materno" placeholder="Ingrese su Apellido Materno">
+              </div>
+              <div class="form-group">
+                <label for="register-email">
+                  Email (Usuario)
+                </label>
+                <input type="email" class="form-control" id="register-email" name="register-email" placeholder="Ingrese su Correo Electrónico">
+              </div>
+              <div class="form-group">
+                <label for="register-reEmail">
+                  Reingrese su Email
+                </label>
+                <input type="email" class="form-control" id="register-reEmail" name="register-reEmail" placeholder="Vuelva a ingresar su Correo Electrónico">
+              </div>
+              <div class="campo">
+                <label for="register-password">
+                  Contraseña
+                </label>
+                <input type="password" class="form-control" id="register-password" name="register-password" placeholder="Ingrese su contraseña">
+              </div>
+              <div class="campo">
+                <label for="register-rePassword">
+                  Reingrese su Contraseña
+                </label>
+                <input type="password" class="form-control" id="register-rePassword" name="register-rePassword" placeholder="Vuelva a ingresar su contraseña">
+              </div>
+              <button id="btn" class="btn btn-primary btn-lg" type="button">Registrarse</button>
+              <button id="btn" class="btn btn-primary btn-lg" type="button">Cancelar</button>
+            </div>
           </div>
-          <div class="campo">
-            <label for="registro-paterno">
-              Apellido Paterno
-            </label>
-            <input type="text" id="registro-paterno" name="registro-paterno">
-          </div>
-          <div class="campo">
-            <label for="registro-materno">
-              Apellido Materno
-            </label>
-            <input type="text" id="registro-materno" name="registro-materno">
-          </div>
-          <div class="campo">
-            <label for="registro-email">
-              Email
-            </label>
-            <input type="email" id="registro-email" name="registro-email">
-          </div>
-          <div class="campo">
-            <label for="registro-password">
-              Contraseña
-            </label>
-            <input type="password" id="registro-password" name="registro-password">
-          </div>
-          <div class="campo">
-            <label for="registro-repassword">
-              Repetir Contraseña
-            </label>
-            <input type="password" id="registro-repassword" name="registro-repassword">
-          </div>
-          <button type="button">Registrarse</button>
         </form>
       </main>
     </div>
     <script src="./js/jquery.js"></script>
+    <script src="./js/bootstrap.js"></script>
   </body>
 </html>

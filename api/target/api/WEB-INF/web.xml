@@ -4,7 +4,9 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
-
+  <listener>
+          <listener-class>cl.milugar.app.utils.HibernateListener</listener-class>
+  </listener>
   <servlet>
   		<servlet-name>MiLugar</servlet-name>
   		<servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>

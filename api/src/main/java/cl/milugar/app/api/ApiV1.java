@@ -1,5 +1,6 @@
 package cl.milugar.app.api;
 
+import java.util.List;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.POST;
 import javax.ws.rs.GET;
@@ -7,6 +8,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
+import cl.milugar.app.utils.HibernateLauncher;
 import cl.milugar.app.responses.TestResponse;
 import cl.milugar.app.requests.TestRequest;
 import cl.milugar.app.responses.RegistrarUsuarioResponse;
@@ -21,6 +23,9 @@ import cl.milugar.app.responses.ContactoResponse;
 import cl.milugar.app.requests.ContactoRequest;
 import cl.milugar.app.responses.DenunciaResponse;
 import cl.milugar.app.requests.DenunciaRequest;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+import org.hibernate.query.Query;
 
 @Path("/prueba")
 public class ApiV1 {
@@ -31,6 +36,20 @@ public class ApiV1 {
   public TestResponse test() {
     TestResponse response = new TestResponse();
     return response;
+  }
+
+  @GET
+  @Path("/mysql")
+  @Produces({MediaType.APPLICATION_JSON})
+  public List mysql() {
+    Session session = HibernateLauncher.getSessionFactory().getCurrentSession();
+    Transaction tr = session.beginTransaction();
+    String sql = "SELECT * FROM MiLugar.estacionamientos;";
+    Query query = session.createNativeQuery(sql);
+    //Object result = query.getSingleResult();
+    List result= query.getResultList();
+    tr.commit();
+    return result;
   }
 
   @POST
