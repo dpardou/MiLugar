@@ -6,6 +6,7 @@
     <link rel="icon" type="image/png" href="./images/logos/logo.png"/>
     <title>Denunciar</title>
     <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/app.css">
   </head>
   <body>
     <div class="container">
@@ -18,9 +19,18 @@
       <main>
         <form id="form-denuncia" action="#" method="post">
 
-          <button type="button">Tomar Fotografía</button>
-          <br>
-          <br>
+          <!--input accept="image/*"  type="file" capture/-->
+
+          <div class="container">
+            <p class="text-center">
+              <label class="btn btn-primary btn-lg d-inline text-center" for="camera">
+                <img src="./images/camera.png" style="width:5vw;height:5vh;">
+                Tomar Fotografía
+                <input type="file" name="camera" id="camera" access="image/*" capture/>
+              </label>
+            </p>
+          </div>
+
           <div class="campo">
             <h2>
               Comuna Infracción

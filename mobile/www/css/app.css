@@ -13,6 +13,7 @@ div {
 }
 
 
+
 #pantalla-inicial {
 
 
@@ -73,4 +74,9 @@ button#btn{
   margin-left: auto;
   margin-right: auto;
   border: none;
+}
+
+input[type=file], #camera{
+  display: none !important;
+  visibility: hidden !important;
 }
