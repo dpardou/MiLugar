@@ -6,148 +6,151 @@
     <link rel="icon" type="image/png" href="./images/logos/logo.png"/>
     <title>Nuevo Estacionamiento</title>
     <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/app.css">
   </head>
   <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">
+        <img src="./images/logos/logo.png" width="30" height="30" class="d-inline-block align-top" alt="" id="logo-aplicacionx">
+        MiLugar
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+      </div>
+    </nav>
     <div class="container">
       <header>
-        <h1>
-          Registro de Nuevo Estacionamiento
-        </h1>
-        <img id="logo-aplicacion" src="./images/logos/logo.png" style="width:10vw;height:15vh;">
+        <h1 class="titulo">Registrar Nuevo Estacionamiento</h1>
+        <div class="container">
+          <img id="logo-aplicacion" src="./images/logos/logo.png">
+        </div>
+        <h1 class="mi-lugar">MiLugar</h1>
       </header>
+
       <main>
-        <form id="form-registro-estacionamiento" action="#" method="post">
-          <h2>
-            Cantidad de Estacionamientos
-          </h2>
-          <div class="campo">
-            <label for="registro-estacionamiento-cantidad1">
-              1
-            </label>
-            <input type="radio" id="registro-estacionamiento-cantidad1">
-          </div>
-          <div class="campo">
-            <label for="registro-estacionamiento-cantidad2">
-              2
-            </label>
-            <input type="radio" id="registro-estacionamiento-cantidad2">
-          </div>
-          <div class="campo">
-            <label for="registro-estacionamiento-cantidad3">
-              3
-            </label>
-            <input type="radio" id="registro-estacionamiento-cantidad3">
-          </div>
-          <h2>
-            Orientación
-          </h2>
-          <br>
-          <div class="campo">
-            <label for="registro-estacionamiento-orientacion">
-              Norte
-            </label>
-            <input type="radio" id="registro-estacionamiento-orientacion">
-          </div>
-          <div class="campo">
-            <label for="registro-estacionamiento-orientacion">
-              Sur
-            </label>
-            <input type="radio" id="registro-estacionamiento-orientacion">
-          </div>
-          <div class="campo">
-            <label for="registro-estacionamiento-orientacion">
-              Oriente
-            </label>
-            <input type="radio" id="registro-estacionamiento-orientacion">
-          </div>
-          <div class="campo">
-            <label for="registro-estacionamiento-orientacion">
-              Poniente
-            </label>
-            <input type="radio" id="registro-estacionamiento-orientacion">
-          </div>
-          <h2>
-            Vereda
-          </h2>
-          <br>
-          <div class="campo">
-            <label for="registro-estacionamiento-veredaN">
-              Norte
-            </label>
-            <input type="radio" id="registro-estacionamiento-veredaN">
-          </div>
-          <div class="campo">
-            <label for="registro-estacionamiento-veredaS">
-              Sur
-            </label>
-            <input type="radio" id="registro-estacionamiento-veredaS">
-          </div>
-          <div class="campo">
-            <label for="registro-estacionamiento-veredaO">
-              Oriente
-            </label>
-            <input type="radio" id="registro-estacionamiento-veredaO">
-          </div>
-          <div class="campo">
-            <label for="registro-estacionamiento-veredaP">
-              Poniente
-            </label>
-            <input type="radio" id="registro-estacionamiento-veredaP">
-          </div>
-          <h2>
-            Tipo Señalización
-          </h2>
-          <br>
-          <div class="campo">
-            <label for="registro-estacionamiento-señaletica">
-              Señaletica
-            </label>
-            <input type="checkbox" id="registro-estacionamiento-señaletica">
-          </div>
-          <div class="campo">
-            <label for="registro-estacionamiento-demarcacion">
-              Demarcación
-            </label>
-            <input type="checkbox" id="registro-estacionamiento-demarcacion">
-          </div>
-          <br>
-          <br>
+        <form action="#" method="post">
+          <div class="card">
+            <div class="card-header">
+              Llenar los siguientes datos para solicitar el registro
+            </div>
+            <div class="card-body">
+              <div class="form-group">
+                <div class="card-header">
+                  <label for="registro-estacionamiento-cantidad">
+                    Cantidad de Estacionamiento(s):
+                  </label>
+                  <div class="campo">
+                    <input type="radio" id="registro-estacionamiento-cantidad" name="registro-estacionamiento-cantidad" value="1"><a id="sub-titulo">  1</a>
+                  </div>
+                  <div class="campo">
+                    <input type="radio" id="registro-estacionamiento-cantidad" name="registro-estacionamiento-cantidad" value="2"><a id="sub-titulo">  2</a>
+                  </div>
+                  <div class="campo">
+                    <input type="radio" id="registro-estacionamiento-cantidad" name="registro-estacionamiento-cantidad" value="3"><a id="sub-titulo">  3</a>
+                  </div>
+                </div>
+              </div>
 
-          <button type="button" onclick="getLocation()">Obtener Coordenadas</button>
+              <div class="form-grupo">
+                <div class="card-header">
+                  <label for="registro-estacionamiento-orientacion">
+                    Orientación:
+                  </label>
+                  <div class="campo">
+                    <input type="radio" id="registro-estacionamiento-orientacion" name="registro-estacionamiento-orientacion" value="norte"><a id="sub-titulo">  Norte</a>
+                  </div>
+                  <div class="campo">
+                    <input type="radio" id="registro-estacionamiento-orientacion" name="registro-estacionamiento-orientacion" value="sur"><a id="sub-titulo">  Sur</a>
+                  </div>
+                  <div class="campo">
+                    <input type="radio" id="registro-estacionamiento-orientacion" name="registro-estacionamiento-orientacion" value="oriente"><a id="sub-titulo">  Oriente</a>
+                  </div>
+                  <div class="campo">
+                    <input type="radio" id="registro-estacionamiento-orientacion" name="registro-estacionamiento-orientacion" value="poniente"><a id="sub-titulo">  Poniente</a>
+                  </div>
+                </div>
+              </div>
 
-          <p id="demo"></p>
+              <div class="form-grupo">
+                <div class="card-header">
+                  <label for="registro-estacionamiento-vereda">
+                    Vereda:
+                  </label>
+                  <div class="campo">
+                    <input type="radio" id="registro-estacionamiento-vereda" name="registro-estacionamiento-vereda" value="norte"><a id="sub-titulo">  Norte</a>
+                  </div>
+                  <div class="campo">
+                    <input type="radio" id="registro-estacionamiento-vereda" name="registro-estacionamiento-vereda" value="sur"><a id="sub-titulo">  Sur</a>
+                  </div>
+                  <div class="campo">
+                    <input type="radio" id="registro-estacionamiento-vereda" name="registro-estacionamiento-vereda" value="oriente"><a id="sub-titulo">  Oriente</a>
+                  </div>
+                  <div class="campo">
+                    <input type="radio" id="registro-estacionamiento-vereda" name="registro-estacionamiento-vereda" value="poniente"><a id="sub-titulo">  Poniente</a>
+                  </div>
+                </div>
+              </div>
 
-          <script>
-          var x = document.getElementById("demo");
+              <div class="form-grupo">
+                <div class="card-header">
+                  <label for="registro-estacionamiento-senalizacion">
+                    Tipo Señalización:
+                  </label>
+                  <div class="campo">
+                    <input type="checkbox" id="registro-estacionamiento-senalizacion" name="registro-estacionamiento-senalizacion" value="senaletica"><a id="sub-titulo">  Señaletica</a>
+                  </div>
+                  <div class="campo">
+                    <input type="checkbox" id="registro-estacionamiento-senalizacion" name="registro-estacionamiento-senalizacion" value="demarcacion"><a id="sub-titulo">  Demarcación</a>
+                  </div>
+                </div>
+              </div>
 
-          function getLocation() {
-              if (navigator.geolocation) {
-                  navigator.geolocation.getCurrentPosition(showPosition);
-              } else {
-                  x.innerHTML = "Geolocation is not supported by this browser.";
-              }
-          }
+              <div class="form-grupo">
+                <div class="card-header">
+                    <label for="registro-estacionamiento-coordenadas">
+                      Coordenadas
+                    </label>
+                    <div class="campo">
+                      <input type="text" id="registro-estacionamiento-coordenadas-x" disabled="true">
+                      <input type="text" id="registro-estacionamiento-coordenadas-y" disabled="true">
+                      <button type="button" onclick="getLocation()">Obtener Coordenadas</button>
+                      <p id="demo"></p>
+                      <script>
+                      var x = document.getElementById("demo");
+                      function getLocation() {
+                          if (navigator.geolocation) {
+                              navigator.geolocation.getCurrentPosition(showPosition);
+                          } else {
+                              x.innerHTML = "Geolocation is not supported by this browser.";
+                          }
+                      }
+                      function showPosition(position) {
+                          document.getElementById("registro-estacionamiento-coordenadas-x").value= position.coords.latitude;
+                          document.getElementById("registro-estacionamiento-coordenadas-y").value= position.coords.longitude;
+                      }
+                      </script>
+                    </div>
+                </div>
+              </div>
 
-          function showPosition(position) {
-              document.getElementById("registro-estacionamiento-coordenadas-x").value= position.coords.latitude;
-              document.getElementById("registro-estacionamiento-coordenadas-y").value= position.coords.longitude;
-          }
-          </script>
-
-          <div class="campo">
-            <label for="registro-estacionamiento-coordenadas">
-              Coordenadas
-            </label>
-            <input type="text" id="registro-estacionamiento-coordenadas-x" disabled="true">
-            <input type="text" id="registro-estacionamiento-coordenadas-y" disabled="true">
+              <form action="#" method="post">
+                  <div class="form-body">
+                    <a href="./login.html"><button id="btn" class="btn btn-primary btn-idx" type="button">Registrar Estacionamiento</button></a>
+                  </div>
+                  <div class="form-body">
+                    <a href="./index.html"><button id="btn" class="btn btn-primary btn-idx" type="button">Cancelar</button></a>
+                  </div>
+              </form>
+            </div>
           </div>
-
-          <button type="button">Registrar</button>
-          <button type="button">Cancelar</button>
-
         </form>
       </main>
     </div>
     <script src="./js/jquery.js"></script>
+    <script src="./js/bootstrap.js"></script>
   </body>
 </html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
+  <link rel="stylesheet" href="./css/menu.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <div class="sidebar">
+    <h2>Menú</h2>
+    <ul>
+      <li><a href="">Inicio</a></li>
+      <li><a href="">Login</a></li>
+      <li><a href="">Registro</a></li>
+      <li><a href="">Filtro Mapa</a>
+        <ul>
+          <li><a href="#">Filtrar por Comuna</a>
+            <select name="menu-filtro-comuna" id="menu-filtro-comuna"></select>
+          </li>
+          <li><a href="#">Filtrar por Kilometros</a>
+            <select name="menu-filtro-km" id="menu-filtro-km">
+              <option value="1" selected>1</option>
+              <option value="5">5</option>
+              <option value="10">10</option>
+              <option value="20">20</option>
+            </select>
+          </li>
+          <li><a href="#">Servicios Básicos</a>
+            <select name="menu-servicios" id="menu-servicios"></select>
+          </li>
+        </ul>
+      </li>
+      <li><a href=""></a>Marcar Estacionamiento</li>
+      <li><a href=""></a>Denunciar</li>
+      <li><a href=""></a>Nosotros</li>
+      <ul>
+        <li><a href="#">Redes Sociales</a></li>
+          <ul>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Twitter</a><i class="fab fa-twitter"></i></li>
+            <li><a href="#">Youtube</a></li>
+          </ul>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </ul>
+  </div>
+  <div class="contenido">
+    <img src="./images/menu.png" alt="" class="menu-bar">
+  </div>
+  <script src="./js/menu.js"></script>
+</body>
+</html>
