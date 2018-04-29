@@ -1,54 +1,94 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <title> INSERTAR MAPA EN GOOGLE MAPS</title>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./stylesheets/bootstrap.css">
+    <link rel="stylesheet" href="./stylesheets/leaflet.css">
+    <link rel="stylesheet" href="./stylesheets/app.css">
+    <link rel="stylesheet" href="./css/app.css">
+    <link rel="stylesheet" href="./css/menu.css">
 
-  <style media="screen">
-    .google_canvas{
-      height: 100vh;
-      width: 100vh;
-    }
-  </style>
-</head>
-<body>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">
+        <img src="./images/logos/logo.png" width="30" height="30" class="d-inline-block align-top" alt="" id="logo-aplicacionx">
+        MiLugar
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-  <div id="google_canvas" class="google_canvas"></div>
-  <script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
-  <script type="text/javascript">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="sidebar">
+          <h2>Menú</h2>
+          <ul>
+            <li><a href="">Inicio</a></li>
+            <li><a href="">Login</a></li>
+            <li><a href="">Registro</a></li>
+            <li><a href="">Filtro Mapa</a>
+              <ul>
+                <li><a href="#">Filtrar por Comuna</a>
+                  <select name="menu-filtro-comuna" id="menu-filtro-comuna"></select>
+                </li>
+                <li><a href="#">Filtrar por Kilometros</a>
+                  <select name="menu-filtro-km" id="menu-filtro-km">
+                    <option value="1" selected>1</option>
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                  </select>
+                </li>
+                <li><a href="#">Servicios Básicos</a>
+                  <select name="menu-servicios" id="menu-servicios"></select>
+                </li>
+              </ul>
+            </li>
+            <li><a href=""></a>Marcar Estacionamiento</li>
+            <li><a href=""></a>Denunciar</li>
+            <li><a href=""></a>Nosotros</li>
+            <ul>
+              <li><a href="#">Redes Sociales</a></li>
+                <ul>
+                  <li><a href="#">Facebook</a></li>
+                  <li><a href="#">Instagram</a></li>
+                  <li><a href="#">Twitter</a><i class="fab fa-twitter"></i></li>
+                  <li><a href="#">Youtube</a></li>
+                </ul>
+              <li><a href="#">Contacto</a></li>
+            </ul>
+          </ul>
+        </div>
 
-     (function(){
-       if(!!navigator.geolocation){
-         var map;
-         var mapOptions = {
-           zoom: 15;
-           mapTypeId: google.maps.MapTypeId.ROADMAP
-         };
+      </div>
+    </nav>
+    <div class="pagina" id="pagina-cargando">
+      <div class="container-fluid">
+        <header>
+          <div class="container">
+            <img id="logo-aplicacion-cargando" src="./images/logos/logo.png">
+          </div>
+          <h1 class="mi-lugar">MiLugar</h1>
+        </header>
+        <div class="container">
+          <img id="imagen-cargando" src="./images/gif/loader.gif" alt="" style="display: block; margin-left: auto; margin-right: auto; border:none;"/>
+        </div>
+        <button class="btn btn-primary" type="button" data-href="#pagina-mapa">
+          Prueba
+        </button>
+      </div>
+    </div>
 
-         map = google.maps.Map(document.getElementById("google_canvas"), mapOptions);
+    <div class="pagina" id="pagina-mapa">
+      <div id="map"></div>
+    </div>
 
-         navigator.geolocation.getCurrentPosition(function(position){
-
-           var geolocate = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-
-           var infoWindow = new google.maps.infoWindow({
-             map: map,
-             position: geolocate,
-             content:
-               '<h1>Coordenadas de mi Posición</h1>' +
-               '<h2>Latitud: '+position.coords.latitude+'</h2>' +
-               '<h2>Longitud: '+position.coords.longitude+'</h2>'
-           });
-
-           map.setCenter(geolocate);
-         });
-
-       } else {
-         document.getElementById("google_canvas").innerHTML = "No se soporta Geolocalización";
-       }
-     })();
-  </script>
-
-
-</body>
-</html>﻿
+    <script src="./javascripts/jquery.js"></script>
+    <script src="./javascripts/bootstrap.js"></script>
+    <script src="./javascripts/leaflet.js"></script>
+    <script src="./javascripts/app.js"></script>
+    <script src="./js/menu.js"></script>
+  </body>
+</html>

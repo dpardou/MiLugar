@@ -7,33 +7,64 @@
   <link rel="icon" type="image/png" href="./images/logos/logo.png"/>
   <title>Mapa</title>
   <link rel="stylesheet" href="./css/bootstrap.css">
-  <link rel="stylesheet" href="./css/leaflet.css">
-  <link rel="stylesheet" href="./css/app.css">
+  <link rel="stylesheet" href="./leaflet.css">
 </head>
-<body>
-  <!--nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">
-      <img src="./images/logos/logo.png" width="30" height="30" class="d-inline-block align-top" alt="" id="logo-aplicacionx">
-      MiLugar
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
+  <body>
+    <div class="container">
+      <header>
+        <label>
+          MiLugar
+        </label>
+        <br>
+        <button type="button">Menu Lateral</button>
+        <img id="logo-aplicacion" src="./images/logos/logo.png" style="width:10vw;height:15vh;">
+      </header>
+      <div id="menu-lateral">
+        <li><a href="">Login</a></li>
+        <li><a href="">Registro</a></li>
+        <li><a href="">Filtro Mapa</a>
+          <ul>
+            <li><a href="">Filtrar por Comuna</a></li>
+            <select name="filtro-comuna" id="filtro-comuna"></select>
+            <li><a href="">Filtrar por Kilometros</a></li>
+            <select name="filtro-kilometros" id="filtro-kilometros"></select>
+            <li><a href="">Servicios Básicos</a></li>
+            <div class="campo">
+              <label for="filtro-servicios-basicos">
+                Carabineros
+              </label>
+              <input type="checkbox" id="filtro-carabineros">
+              <label for="filtro-servicios-basicos">
+                PDI
+              </label>
+              <input type="checkbox" id="filtro-pdi">
+              <label for="filtro-servicios-basicos">
+                Bomberos
+              </label>
+              <input type="checkbox" id="filtro-bomberos">
+              <label for="filtro-servicios-basicos">
+                Hospitales
+              </label>
+              <input type="checkbox" id="filtro-hospitales">
+            </div>
+          </ul>
+        </li>
+        <li><a href="">Marcar Estacionamiento</a></li>
+        <li><a href="">Denunciar</a></li>
+        <li><a href="">Nosotros</a></li>
+        <li><a href="">Redes Sociales</a></li>
+        <ul>
+            <li><a href="">Facebook</a></li>
+            <li><a href="">Instagram</a></li>
+            <li><a href="">Tweeter</a></li>
+            <li><a href="">Youtube</a></li>
+        </ul>
+        <li><a href="">Contacto</a></li>
+      </div>
+      <div id="mapa" style="width:50vw;height:50vh;"></div>
     </div>
-  </nav-->
-
-  <div class="pagina" id="pagina-mapa">
-    <div id="map"></div>
-  </div>
-
-
-  <script src="./js/jquery.js"></script>
-  <script src="./js/bootstrap.js"></script>
-  <script src="./js/leaflet.js"></script>
-  <script src="./js/app.js"></script>
-</body>
-
+    <script src="./js/jquery.js"></script>
+    <script src="./leaflet.js"></script>
+    <script src="./js/app.js"></script>
+  </body>
 </html>
